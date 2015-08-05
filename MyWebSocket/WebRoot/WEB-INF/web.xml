@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <display-name></display-name>	
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+    <servlet>
+        <servlet-name>websocketservlet</servlet-name>
+        <servlet-class>com.websocket.servlet.WebSocketServlet</servlet-class>
+    </servlet>
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.websocket.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>RoomServlet</servlet-name>
+    <servlet-class>com.websocket.servlet.RoomServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CloseRoomServlet</servlet-name>
+    <servlet-class>com.websocket.servlet.CloseRoomServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>JoinRoomServlet</servlet-name>
+    <servlet-class>com.websocket.servlet.JoinRoomServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ClientCloseServlet</servlet-name>
+    <servlet-class>com.websocket.servlet.ClientCloseServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+    <servlet-mapping>
+        <servlet-name>websocketservlet</servlet-name>
+        <url-pattern>/websocket</url-pattern>
+    </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/servlet/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RoomServlet</servlet-name>
+    <url-pattern>/servlet/RoomServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CloseRoomServlet</servlet-name>
+    <url-pattern>/servlet/CloseRoomServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>JoinRoomServlet</servlet-name>
+    <url-pattern>/servlet/JoinRoomServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ClientCloseServlet</servlet-name>
+    <url-pattern>/servlet/ClientCloseServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
